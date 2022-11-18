@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 const todoList = require("../todo");
 const { all, add, markAsComplete, overdue, dueToday, dueLater } = todoList();
 
 describe("Todo List Test suite", () => {
   beforeAll(() => {
     add({
-      title: "todo3",
+      title: "todoL",
       dueDate: new Date().toLocaleDateString("en-CA"),
       completed: false,
     });
@@ -13,7 +14,7 @@ describe("Todo List Test suite", () => {
   test("Adding new todo", () => {
     const todoLength = all.length;
     add({
-      title: "todo3",
+      title: "todoL",
       dueDate: new Date().toLocaleDateString("en-CA"),
       completed: false,
     });
@@ -25,7 +26,7 @@ describe("Todo List Test suite", () => {
     expect(all[0].completed).toBe(true);
   });
 
-  test(" todo3 Overdue.", () => {
+  test(" todoL Overdue.", () => {
     add({
       title: "overdue Todo",
       dueDate: new Date(
@@ -36,11 +37,11 @@ describe("Todo List Test suite", () => {
     expect(overdue().length).toBe(1);
   });
 
-  test("Due_today todo3", () => {
+  test("Due_today todoL", () => {
     expect(dueToday().length).toBe(2);
   });
 
-  test("todo3 Due later", () => {
+  test("todoL Due later", () => {
     add({
       title: "Test due later",
       dueDate: new Date(

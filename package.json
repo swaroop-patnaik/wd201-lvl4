@@ -2,8 +2,9 @@
   "name": "wd201_lvl4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "todo.js",
   "scripts": {
+    "start": "node todo.js",
     "test": "jest",
     "prepare": "husky install"
   },
@@ -13,7 +14,7 @@
       "prettier -white ."
     ]
   },
-  "author": "",
+  "author": "swaroop-patnaik",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.27.0",
